@@ -7,20 +7,20 @@ import java.awt.event.*;
 public class PongGame extends JPanel implements KeyListener, ActionListener {
 
 
-//    private static final int WIDTH = 800;
-//    private static final int HEIGHT = 400;
-//
-//    private int ballX = 400, ballY = 200;
-//    private int ballDX = 2, ballDY = 2;
-//    private int leftPadY = 150, rightPadY = 150;
-//    private final int PAD_WIDTH = 15, PAD_HEIGHT = 80;
-//
-//    private boolean leftUp = false, leftDown = false;
-//    private boolean rightUp = false, rightDown = false;
-//
-//    private int leftScore = 0, rightScore = 0;
-//
-//    private Timer timer;
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 400;
+
+    private int ballX = 400, ballY = 200;
+    private int ballDX = 2, ballDY = 2;
+    private int leftPadY = 150, rightPadY = 150;
+    private final int PAD_WIDTH = 15, PAD_HEIGHT = 80;
+
+    private boolean leftUp = false, leftDown = false;
+    private boolean rightUp = false, rightDown = false;
+
+    private int leftScore = 0, rightScore = 0;
+
+    private Timer timer;
 //
 //    public PongGame() {
 //        this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
