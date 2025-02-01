@@ -28,35 +28,35 @@ public class PongGame extends JPanel implements KeyListener, ActionListener {
         this.addKeyListener(this);
         this.setFocusable(true);
 
-        // Timer yaratish, har 10 millisekundda o'yinni yangilash
+
         timer = new Timer(10, this);
         timer.start();
     }
-//
-//    @Override
-//    public void paintComponent(Graphics g) {
-//        super.paintComponent(g);
-//
-//        // To'pni chizish
-//        g.setColor(Color.WHITE);
-//        g.fillOval(ballX, ballY, 15, 15); // To'pni chizish
-//
-//        // Padlarni chizish
-//        g.fillRect(30, leftPadY, PAD_WIDTH, PAD_HEIGHT); // Chap pad
-//        g.fillRect(WIDTH - 45, rightPadY, PAD_WIDTH, PAD_HEIGHT); // O'ng pad
-//
-//        // Skorlarni chizish
-//        g.setFont(new Font("Arial", Font.PLAIN, 30));
-//        g.drawString("Left: " + leftScore, 50, 30); // Chap o'yinchi
-//        g.drawString("Right: " + rightScore, WIDTH - 150, 30); // O'ng o'yinchi
-//
-//        // O'yin tugashi haqida xabar
-//        if (ballX <= 0 || ballX >= WIDTH - 15) {
-//            g.setColor(Color.WHITE);
-//            g.setFont(new Font("Arial", Font.BOLD, 40));
-//            g.drawString("Game Over!", WIDTH / 2 - 120, HEIGHT / 2);
-//        }
-//    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+
+        g.setColor(Color.WHITE);
+        g.fillOval(ballX, ballY, 15, 15);
+
+
+        g.fillRect(30, leftPadY, PAD_WIDTH, PAD_HEIGHT);
+        g.fillRect(WIDTH - 45, rightPadY, PAD_WIDTH, PAD_HEIGHT);
+
+
+        g.setFont(new Font("Arial", Font.PLAIN, 30));
+        g.drawString("Left: " + leftScore, 50, 30);
+        g.drawString("Right: " + rightScore, WIDTH - 150, 30);
+
+
+        if (ballX <= 0 || ballX >= WIDTH - 15) {
+            g.setColor(Color.WHITE);
+            g.setFont(new Font("Arial", Font.BOLD, 40));
+            g.drawString("Game Over!", WIDTH / 2 - 120, HEIGHT / 2);
+        }
+    }
 //
 //    @Override
 //    public void actionPerformed(ActionEvent e) {
