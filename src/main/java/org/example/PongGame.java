@@ -21,17 +21,17 @@ public class PongGame extends JPanel implements KeyListener, ActionListener {
     private int leftScore = 0, rightScore = 0;
 
     private Timer timer;
-//
-//    public PongGame() {
-//        this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
-//        this.setBackground(Color.BLACK);
-//        this.addKeyListener(this);
-//        this.setFocusable(true);
-//
-//        // Timer yaratish, har 10 millisekundda o'yinni yangilash
-//        timer = new Timer(10, this);
-//        timer.start();
-//    }
+
+    public PongGame() {
+        this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        this.setBackground(Color.BLACK);
+        this.addKeyListener(this);
+        this.setFocusable(true);
+
+        // Timer yaratish, har 10 millisekundda o'yinni yangilash
+        timer = new Timer(10, this);
+        timer.start();
+    }
 //
 //    @Override
 //    public void paintComponent(Graphics g) {
