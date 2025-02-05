@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class PongGame extends JPanel implements KeyListener, ActionListener {
 
 
-    private static final int WIDTH = 800;
+    private static final int vidth = 800;
     private static final int HEIGHT = 400;
 
     private int ballX = 400, ballY = 200;
@@ -23,7 +23,7 @@ public class PongGame extends JPanel implements KeyListener, ActionListener {
     private Timer timer;
 
     public PongGame() {
-        this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        this.setPreferredSize(new Dimension(vidth, HEIGHT));
         this.setBackground(Color.BLACK);
         this.addKeyListener(this);
         this.setFocusable(true);
@@ -43,18 +43,18 @@ public class PongGame extends JPanel implements KeyListener, ActionListener {
 
 
         g.fillRect(30, leftPadY, PAD_WIDTH, PAD_HEIGHT);
-        g.fillRect(WIDTH - 45, rightPadY, PAD_WIDTH, PAD_HEIGHT);
+        g.fillRect(vidth - 45, rightPadY, PAD_WIDTH, PAD_HEIGHT);
 
 
         g.setFont(new Font("Arial", Font.PLAIN, 30));
         g.drawString("Left: " + leftScore, 50, 30);
-        g.drawString("Right: " + rightScore, WIDTH - 150, 30);
+        g.drawString("Right: " + rightScore, vidth - 150, 30);
 
 
-        if (ballX <= 0 || ballX >= WIDTH - 15) {
+        if (ballX <= 0 || ballX >= vidth - 15) {
             g.setColor(Color.WHITE);
             g.setFont(new Font("Arial", Font.BOLD, 40));
-            g.drawString("Game Over!", WIDTH / 2 - 120, HEIGHT / 2);
+            g.drawString("Game Over!", vidth / 2 - 120, HEIGHT / 2);
         }
     }
 
@@ -64,7 +64,7 @@ public class PongGame extends JPanel implements KeyListener, ActionListener {
         if (ballX <= 0) {
             rightScore++;
             resetBall();
-        } else if (ballX >= WIDTH - 15) {
+        } else if (ballX >= vidth - 15) {
             leftScore++;
             resetBall();
         } else {
@@ -110,14 +110,14 @@ public class PongGame extends JPanel implements KeyListener, ActionListener {
         }
 
 
-        if (ballX >= WIDTH - 45 && ballY + 15 >= rightPadY && ballY <= rightPadY + PAD_HEIGHT) {
+        if (ballX >= vidth - 45 && ballY + 15 >= rightPadY && ballY <= rightPadY + PAD_HEIGHT) {
             ballDX = -ballDX;
         }
     }
 
     private void resetBall() {
 
-        ballX = WIDTH / 2 - 7;
+        ballX = vidth / 2 - 7;
         ballY = HEIGHT / 2 - 7;
         ballDX = -ballDX;
         ballDY = 2;
